@@ -1,0 +1,273 @@
+@media only screen and (max-width: 600px) {
+	header {
+		height: 75vh;
+	}
+
+	nav .logo {
+		height: 80px;
+		width: auto;
+	}
+
+	nav ul li {
+		margin-left: 20px;
+	}
+
+	nav ul li a:link,
+	a:visited {
+		font-size: 0.8rem;
+	}
+
+	.hero-box h1 {
+		font-size: 1.5rem;
+	}
+
+	.hero-box .btn {
+		display: inline-flex;
+		text-decoration: none;
+		padding: 7px 10px;
+		font-size: 1rem;
+	}
+
+	.hero-box .btn:last-child {
+		margin-left: 10px;
+	}
+
+	.about h1 {
+		font-size: 1.5rem;
+	}
+
+	.container {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.container div {
+		margin: 20px 0;
+		width: 100%;
+	}
+
+	.container h2 {
+		font-size: 1.1rem;
+	}
+
+	.container img {
+		width: inherit;
+	}
+
+	.container p {
+		font-size: 1rem;
+	}
+
+	table {
+		display: none;
+	}
+
+	.salaries h1 {
+		font-size: 1.5rem;
+	}
+
+	.contacts h1 {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.about h1,
+	.salaries h1,
+	.contacts h1 {
+		font-size: 2rem;
+	}
+
+	nav .logo {
+		height: 100px;
+		width: auto;
+	}
+
+	nav ul li a:link,
+	a:visited {
+		font-size: 1rem;
+	}
+
+	.hero-box h1 {
+		font-size: 2.2rem;
+	}
+
+	.hero-box .btn {
+		display: inline-flex;
+		text-decoration: none;
+		padding: 13px 16px;
+		font-size: 1rem;
+	}
+
+	.hero-box .btn:last-child {
+		margin-left: 15px;
+	}
+
+	.container {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.container div {
+		margin: 20px 0;
+		width: 100%;
+	}
+
+	.container img {
+		width: auto;
+	}
+
+	.container h2 {
+		font-size: 1.4rem;
+	}
+
+	.container p {
+		font-size: 1.1rem;
+	}
+
+	table th,
+	td {
+		padding: 7px 4px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.hero-box h1,
+	.about h1,
+	.salaries h1,
+	.contacts h1 {
+		font-size: 2.3rem;
+	}
+
+	nav .logo {
+		height: 120px;
+		width: auto;
+	}
+
+	nav ul li a:link,
+	a:visited {
+		font-size: 1.1rem;
+	}
+
+	.hero-box .btn {
+		display: inline-flex;
+		text-decoration: none;
+		padding: 14px 18px;
+		font-size: 1.1rem;
+	}
+
+	.hero-box .btn:last-child {
+		margin-left: 20px;
+	}
+
+	.container {
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	.container div {
+		width: 32.33%;
+	}
+
+	.container img {
+		width: 245px;
+		height: auto;
+	}
+
+	.container p {
+		font-size: 1rem;
+	}
+
+	table th,
+	td {
+		padding: 5px 2px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.hero-box h1,
+	.about h1,
+	.salaries h1,
+	.contacts h1 {
+		font-size: 3rem;
+	}
+
+	nav ul li a:link,
+	a:visited {
+		font-size: 1.1rem;
+	}
+
+	.hero-box .btn {
+		padding: 14px 24px;
+	}
+
+	.hero-box .btn:last-child {
+		margin-left: 25px;
+	}
+
+	.container h2 {
+		font-size: 1.6rem;
+	}
+
+	.container img {
+		width: 320px;
+		height: 280px;
+	}
+
+	table th,
+	td {
+		padding: 7px 4px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.hero-box h1 {
+		font-size: 3.2rem;
+	}
+
+	.hero-box .btn {
+		padding: 15px 28px;
+	}
+
+	.container img {
+		width: 400px;
+		height: 320px;
+	}
+
+	.hero-box .btn:last-child {
+		margin-left: 25px;
+	}
+
+	.about h1 {
+		font-size: 2.2rem;
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.container h2 {
+		font-size: 1.6rem;
+	}
+
+	.container p {
+		font-size: 1.1rem;
+	}
+
+	.salaries h1 {
+		font-size: 2.2rem;
+	}
+
+	table th,
+	td {
+		padding: 20px;
+		font-size: 1.1rem;
+	}
+
+	.contacts h1 {
+		font-size: 2.2rem;
+	}
+}
