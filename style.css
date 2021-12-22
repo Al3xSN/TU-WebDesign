@@ -24,12 +24,25 @@ a {
 
 /* HEADER */
 header {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url(./resources/hero.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
+}
+
+.first-header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(./resources/hero.jpg);
+}
+
+.second-header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(./resources/second-hero.jpg);
+}
+
+.third-header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(./resources/third-hero.jpg);
 }
 
 nav {
@@ -117,6 +130,37 @@ nav ul li a:hover {
 	background: rgba(184, 184, 184, 0.8);
 	border-color: rgba(184, 184, 184, 0.8);
 }
+
+.img-options {
+	margin-top: 27rem;
+}
+
+.img-options
+.img-list {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.img-list
+li {
+	margin-left: 30px;
+}
+
+.img-list
+li
+button {
+	cursor: pointer;
+	padding: 12px;
+	border: 1px solid rgb(204, 204, 204);
+	border-radius: 50px;
+	background: transparent;
+}
+
+.active {
+	background: rgb(204, 204, 204) !important;
+}
+
 
 /* SECTION - SEE MORE  */
 .about {
