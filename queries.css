@@ -1,8 +1,4 @@
 @media only screen and (max-width: 600px) {
-	header {
-		height: 75vh;
-	}
-
 	nav .logo {
 		height: 80px;
 		width: auto;

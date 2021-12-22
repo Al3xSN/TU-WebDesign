@@ -3,14 +3,19 @@ const secondButton = document.querySelector(".second-btn");
 const thirdButton = document.querySelector(".third-btn");
 const header = document.querySelector('header');
 
-const pureFunc = {
+const pureFuncs = {
     replacingHeaderImage: (classList) => {
         if (!header.classList.contains(classList)) {
             header.classList.replace(header.classList, classList);
-            header.animate([{ opacity: '0.7' }, { opacity: '1' }], {
+            header.animate([{ opacity: '0.6' }, { opacity: '1' }], {
                 duration: 1200,
             });
         }
+    },
+    maniplatingClasses: (firstRemovebleButton, secondRemovebleButton, firstToggleButton) => {
+        pureFuncs.removeClass(firstRemovebleButton, 'active');
+        pureFuncs.removeClass(secondRemovebleButton, 'active');
+        pureFuncs.toggleClass(firstToggleButton, 'active');
     },
     removeClass: (button, className) => {
         button.classList.remove(className);
@@ -22,32 +27,26 @@ const pureFunc = {
 
 const init = () => {
     firstButton.addEventListener('click', () => {
-        pureFunc.replacingHeaderImage('first-header');
+        pureFuncs.replacingHeaderImage('first-header');
 
         if (!firstButton.classList.contains('active')) {
-            pureFunc.removeClass(secondButton, 'active');
-            pureFunc.removeClass(thirdButton, 'active');
-            pureFunc.toggleClass(firstButton, 'active');
+            pureFuncs.maniplatingClasses(secondButton, thirdButton, firstButton);
         }
     });
 
     secondButton.addEventListener('click', () => {
-        pureFunc.replacingHeaderImage('second-header');
+        pureFuncs.replacingHeaderImage('second-header');
 
         if (!secondButton.classList.contains('active')) {
-            pureFunc.removeClass(firstButton, 'active');
-            pureFunc.removeClass(thirdButton, 'active');
-            pureFunc.toggleClass(secondButton, 'active');
+            pureFuncs.maniplatingClasses(firstButton, thirdButton, secondButton);
         }
     });
 
     thirdButton.addEventListener('click', () => {
-        pureFunc.replacingHeaderImage('third-header');
+        pureFuncs.replacingHeaderImage('third-header');
 
         if (!thirdButton.classList.contains('active')) {
-            pureFunc.removeClass(firstButton, 'active');
-            pureFunc.removeClass(secondButton, 'active');
-            pureFunc.toggleClass(thirdButton, 'active');
+            pureFuncs.maniplatingClasses(firstButton, secondButton, thirdButton);
         }
     });
 };
