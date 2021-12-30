@@ -1,7 +1,13 @@
-const firstButton = document.querySelector(".first-btn");
-const secondButton = document.querySelector(".second-btn");
-const thirdButton = document.querySelector(".third-btn");
 const header = document.querySelector('header');
+const firstBtn = document.querySelector(".first-btn");
+const secondBtn = document.querySelector(".second-btn");
+const thirdBtn = document.querySelector(".third-btn");
+const formSubmitBtn = document.querySelector(".form-btn");
+const formFirstName = document.querySelector(".first-name");
+const formLastName = document.querySelector(".last-name");
+const formEmail = document.querySelector(".email");
+const formTxtArea = document.querySelector(".form-txtarea");
+
 
 const pureFuncs = {
     replacingHeaderImage: (classList) => {
@@ -17,37 +23,49 @@ const pureFuncs = {
         pureFuncs.removeClass(secondRemovebleButton, 'active');
         pureFuncs.toggleClass(firstToggleButton, 'active');
     },
-    removeClass: (button, className) => {
-        button.classList.remove(className);
-    },
-    toggleClass: (button, className) => {
-        button.classList.toggle(className);
-    }
-}
+    removeClass: (button, className) => button.classList.remove(className),
+    toggleClass: (button, className) => button.classList.toggle(className)
+};
 
-const init = () => {
-    firstButton.addEventListener('click', () => {
+const slideshowController = () => {
+    firstBtn.addEventListener('click', () => {
         pureFuncs.replacingHeaderImage('first-header');
 
-        if (!firstButton.classList.contains('active')) {
-            pureFuncs.maniplatingClasses(secondButton, thirdButton, firstButton);
+        if (!firstBtn.classList.contains('active')) {
+            pureFuncs.maniplatingClasses(secondBtn, thirdBtn, firstBtn);
         }
     });
 
-    secondButton.addEventListener('click', () => {
+    secondBtn.addEventListener('click', () => {
         pureFuncs.replacingHeaderImage('second-header');
 
-        if (!secondButton.classList.contains('active')) {
-            pureFuncs.maniplatingClasses(firstButton, thirdButton, secondButton);
+        if (!secondBtn.classList.contains('active')) {
+            pureFuncs.maniplatingClasses(firstBtn, thirdBtn, secondBtn);
         }
     });
 
-    thirdButton.addEventListener('click', () => {
+    thirdBtn.addEventListener('click', () => {
         pureFuncs.replacingHeaderImage('third-header');
 
-        if (!thirdButton.classList.contains('active')) {
-            pureFuncs.maniplatingClasses(firstButton, secondButton, thirdButton);
+        if (!thirdBtn.classList.contains('active')) {
+            pureFuncs.maniplatingClasses(firstBtn, secondBtn, thirdBtn);
         }
     });
 };
-init();
+slideshowController();
+
+const formSubmitController = () => {
+    const users = [];
+
+    formSubmitBtn.addEventListener('click', () => {
+        const user = {
+            firstName: formFirstName.value,
+            lastName: formLastName.value,
+            email: formEmail.value,
+            message: formTxtArea.value
+        };
+
+        users.push(user);
+    });
+};
+formSubmitController();
