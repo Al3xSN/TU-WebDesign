@@ -29,19 +29,21 @@
 			<div class="img-options">
 				<ul class="img-list">
 					<li>
-						<button class="first-btn active"></button>
+						<button class="first-btn active" data-type="s1"></button>
 					</li>
 					<li>
-						<button class="second-btn"></button>
+						<button class="second-btn" data-type="s2"></button>
 					</li>
 					<li>
-						<button class="third-btn"></button>
+						<button class="third-btn" data-type="s3"></button>
 					</li>
 				</ul>
 			</div>
 		</header>
+
 		<section id="about" class="about">
 			<h1>3 ways to start a business</h1>
+			
 			<div class="container">
 				<div>
 					<h2>Become a Copywriter</h2>
@@ -57,6 +59,7 @@
 						remotely, but it also allows you to control your schedule.
 					</p>
 				</div>
+
 				<div>
 					<h2>App Development</h2>
 					<img src="./resources/developer-img.jpg" alt="" />
@@ -71,6 +74,7 @@
 						investing lots of money in your idea.
 					</p>
 				</div>
+
 				<div>
 					<h2>Affiliate Marketing</h2>
 					<img src="./resources/affiliate-img.jpg" alt="" />
@@ -136,21 +140,21 @@
 		<section id="contacts" class="contacts">
 			<h1>Contact us</h1>
 			<div class="container">
-				<form action="">
+				<form action="" onsubmit="">
 					<input class="first-name" placeholder="First name" type="text" />
 					<input class="last-name" placeholder="Last name" type="text" />
 					<input class="email" placeholder="Email" type="email" name="" id="" />
+					<textarea
+						class="form-txtarea"
+						placeholder="Send message"
+						form="testformid"
+						name="taname"
+						id="taid"
+						cols="33"
+						wrap="soft"
+					></textarea>
+					<button class="form-btn" type="submit">Submit</button>
 				</form>
-				<textarea
-					class="form-txtarea"
-					placeholder="Send message"
-					form="testformid"
-					name="taname"
-					id="taid"
-					cols="33"
-					wrap="soft"
-				></textarea>
-				<button class="form-btn" type="reset">Submit</button>
 			</div>
 		</section>
 		<footer>
