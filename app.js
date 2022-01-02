@@ -1,7 +1,5 @@
 const header = document.querySelector('header');
-const firstBtn = document.querySelector(".first-btn");
-const secondBtn = document.querySelector(".second-btn");
-const thirdBtn = document.querySelector(".third-btn");
+const btns = document.querySelectorAll('button');
 const formSubmitBtn = document.querySelector(".form-btn");
 const formFirstName = document.querySelector(".first-name");
 const formLastName = document.querySelector(".last-name");
@@ -28,28 +26,25 @@ const pureFuncs = {
 };
 
 const slideshowController = () => {
-    firstBtn.addEventListener('click', () => {
-        pureFuncs.replacingHeaderImage('first-header');
-
-        if (!firstBtn.classList.contains('active')) {
-            pureFuncs.maniplatingClasses(secondBtn, thirdBtn, firstBtn);
-        }
-    });
-
-    secondBtn.addEventListener('click', () => {
-        pureFuncs.replacingHeaderImage('second-header');
-
-        if (!secondBtn.classList.contains('active')) {
-            pureFuncs.maniplatingClasses(firstBtn, thirdBtn, secondBtn);
-        }
-    });
-
-    thirdBtn.addEventListener('click', () => {
-        pureFuncs.replacingHeaderImage('third-header');
-
-        if (!thirdBtn.classList.contains('active')) {
-            pureFuncs.maniplatingClasses(firstBtn, secondBtn, thirdBtn);
-        }
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.dataset.type === "s1") {
+                pureFuncs.replacingHeaderImage('first-header');
+                if (!btns[0].classList.contains('active')) {
+                    pureFuncs.maniplatingClasses(btns[1], btns[2], btns[0]);
+                }
+            } else if (btn.dataset.type === "s2") {
+                pureFuncs.replacingHeaderImage('second-header');
+                if (!btns[1].classList.contains('active')) {
+                    pureFuncs.maniplatingClasses(btns[0], btns[2], btns[1]);
+                }
+            } else {
+                pureFuncs.replacingHeaderImage('third-header');
+                if (!btns[2].classList.contains('active')) {
+                    pureFuncs.maniplatingClasses(btns[0], btns[1], btns[2]);
+                }
+            }
+        });
     });
 };
 slideshowController();
