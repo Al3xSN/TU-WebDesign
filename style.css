@@ -28,21 +28,8 @@ header {
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
-}
-
-.first-header {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url(./resources/hero.jpg);
-}
-
-.second-header {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url(./resources/second-hero.jpg);
-}
-
-.third-header {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url(./resources/third-hero.jpg);
 }
 
 nav {
@@ -117,7 +104,6 @@ nav ul li a:hover {
 
 .hero-box .btn-ghost:visited,
 .btn:link {
-	color: white;
 	transition: background-color 0.5s;
 }
 
@@ -128,7 +114,7 @@ nav ul li a:hover {
 
 .hero-box .btn-active:hover {
 	background: rgba(184, 184, 184, 0.8);
-	border-color: rgba(184, 184, 184, 0.8);
+	border-color: rgb(173, 173, 173);
 }
 
 .img-options {
