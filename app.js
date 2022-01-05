@@ -23,17 +23,22 @@ const slideshowController = () => {
 slideshowController();
 
 const formSubmitController = () => {
-    const users = [];
+    // const users = [];
 
     formSubmitBtn.addEventListener('click', () => {
-        const user = {
-            firstName: formFirstName.value,
-            lastName: formLastName.value,
-            email: formEmail.value,
-            message: formTxtArea.value
-        };
+        if (formFirstName.value.length < 3 || formLastName.value.length < 3) {
+            alert("Too short first name/last name!")
+        } // else {
+        //     const user = {
+        //         firstName: formFirstName.value,
+        //         lastName: formLastName.value,
+        //         email: formEmail.value,
+        //         message: formTxtArea.value
+        //     };
 
-        users.push(user);
+        //     users.push(user);
+        //     console.log(users);
+        // }
     });
 };
 formSubmitController();

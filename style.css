@@ -103,7 +103,8 @@ nav ul li a:hover {
 }
 
 .hero-box .btn-ghost:visited,
-.btn:link {
+.btn-ghost:link {
+	color: white;
 	transition: background-color 0.5s;
 }
 
